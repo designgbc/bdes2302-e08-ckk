@@ -15,7 +15,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
 
-export default async function Page({ params }) {
+export default async function Page({ params }:any) {
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
 
